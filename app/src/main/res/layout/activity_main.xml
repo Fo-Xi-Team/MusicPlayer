@@ -68,7 +68,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:src="@drawable/previous" />
+            android:src="@drawable/previous"
+            android:contentDescription="TODO" />
         <ImageView android:id="@+id/btn_play"
             android:layout_width="40dp"
             android:layout_height="40dp"
