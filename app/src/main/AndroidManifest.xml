@@ -14,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service android:name=".MusicService" />
+        <activity android:name=".lyrics">
+
+        </activity>
         <activity android:name=".MainActivity"
+
             android:theme="@style/AppTheme.NoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

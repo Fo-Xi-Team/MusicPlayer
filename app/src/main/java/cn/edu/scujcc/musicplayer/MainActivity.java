@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
@@ -60,14 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // variables
     private static boolean music_playing = false;
     private int pos;
-
     // ********************************************
     // onCreate部分
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         // 获取权限
         initPermissions();
 
