@@ -5,24 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#e9faf6"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#dfebe8"
+        android:background="#FFFFFF"
         android:orientation="vertical">
-        <TextView android:id="@+id/music_list_title"
+
+        <TextView
+            android:id="@+id/music_list_title"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="6dp"
-            android:text="本地音乐"
-            android:textSize="16sp"
-            android:paddingLeft="10dp"
+            android:background="#4876FF"
             android:gravity="center_vertical"
-            android:background="#e9faf6" />
+            android:paddingLeft="10dp"
+            android:text="本地音乐"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
         <ListView android:id="@+id/music_list"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -36,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:background="#e9faf6">
+        android:background="#4876FF">
         <ImageView android:id="@+id/music_thumb"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -51,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="26dp"
                 android:textSize="14sp"
-                android:textColor="#0b9900"
+                android:textColor="#FFFFFF"
                 android:paddingLeft="5dp"
                 android:gravity="center_vertical"
                 android:maxLines="1"/>
@@ -59,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="14dp"
                 android:textSize="12sp"
-                android:textColor="#0b9900"
+                android:textColor="#FFFFFF"
                 android:paddingLeft="5dp"
                 android:gravity="center_vertical"
                 android:maxLines="1"/>
