@@ -26,9 +26,7 @@ import cn.edu.scujcc.musicplayer.model.MusicInfo;
 public class lyrics extends AppCompatActivity implements View.OnClickListener {
     // 和MusicAmount有关的
     public static final String LYRICS_ACTIVITY_ACTION = "cn.edu.scujcc.musicplayer.LYRICS_ACTIVITY";
-    public static final String MAIN_ACTIVITY_NAME = "main_activity";
-    public static final String MUSIC_AMOUNT = "music_amount";
-    public static final String MUSIC_LIST = "music_list";
+    public static final String LYRICS_ACTIVITY_NAME = "lyrics_activity";
     public static final String MUSIC_INFO = "music_info";
     public static final String IS_PLAYING = "is_playing";
     public static final String LIST_POS = "list_pos";
@@ -51,7 +49,7 @@ public class lyrics extends AppCompatActivity implements View.OnClickListener {
     private static Button fanhui;
 
     // broadcast receiver
-    private MainActivityReceiver receiver;
+    private lyricsReceiver receiver;
 
     // variables
     private static boolean music_playing = false;
@@ -68,7 +66,7 @@ public class lyrics extends AppCompatActivity implements View.OnClickListener {
 
         // 注册receiver
 
-        receiver = new MainActivityReceiver();
+        receiver = new lyricsReceiver();
         IntentFilter filter = new IntentFilter();
         filter.addAction(LYRICS_ACTIVITY_ACTION);
         registerReceiver(receiver, filter);
@@ -256,12 +254,12 @@ public class lyrics extends AppCompatActivity implements View.OnClickListener {
 
 
     // 用Broadcast Receiver从Service获得数据，修改UI
-    static class MainActivityReceiver extends BroadcastReceiver {
+    static class lyricsReceiver extends BroadcastReceiver {
         private ListAdapter adapter;
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            switch (intent.getIntExtra(MAIN_ACTIVITY_NAME, -1)) {
+            switch (intent.getIntExtra(LYRICS_ACTIVITY_NAME, -1)) {
 
                 case StatusSigns.PLAY:
                     music_playing = intent.getBooleanExtra(IS_PLAYING, false);

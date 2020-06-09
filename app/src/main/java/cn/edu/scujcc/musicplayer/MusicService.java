@@ -513,6 +513,7 @@ public class MusicService extends Service {
             context.sendBroadcast(intent);
         }
 
+
         private void sendResetActivityUIStatusBroadcast(Context context) {
             Intent intent = new Intent(MainActivity.MAIN_ACTIVITY_ACTION);
             intent.setPackage(context.getPackageName());
@@ -528,6 +529,7 @@ public class MusicService extends Service {
             intent.putExtra(MainActivity.IS_PLAYING, manager.isPlaying());
             context.sendBroadcast(intent);
         }
+
 
         // 设定Controller panel样式
         private void sendStartStatusBroadcast(Context context, int position) {
