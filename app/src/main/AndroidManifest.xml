@@ -16,17 +16,14 @@
         <service android:name=".MusicService" />
         <activity android:name=".lyrics"
             android:theme="@style/AppTheme.NoBar">
+        </activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-
-            android:theme="@style/AppTheme.NoBar">
-
-        </activity>
     </application>
-
 </manifest>

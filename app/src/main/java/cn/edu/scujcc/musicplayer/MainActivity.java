@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static TextView listTitle;
 
     // controller
+    private ImageView MainMusic;
     private ImageView btnPrevious;
     private ImageView btnNext;
     private static ImageView btnPlay;
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playingArtist = findViewById(R.id.artist_name);
         musicSeekBar = findViewById(R.id.music_seek_bar);
 
+        MainMusic = findViewById(R.id.music_thumb);
         btnPrevious = findViewById(R.id.btn_previous);
         btnNext = findViewById(R.id.btn_next);
         btnPlay = findViewById(R.id.btn_play);
@@ -135,6 +137,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setButtonsOnClickListener() {
+        MainMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,lyrics.class);
+                startActivity(intent);
+            }
+        });
         btnPrevious.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         btnPlay.setOnClickListener(this);

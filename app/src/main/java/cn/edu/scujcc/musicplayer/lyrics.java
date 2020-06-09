@@ -21,10 +21,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-
-
-import java.util.List;
-
 import cn.edu.scujcc.musicplayer.model.MusicInfo;
 
 public class lyrics extends AppCompatActivity implements View.OnClickListener {
@@ -43,7 +39,6 @@ public class lyrics extends AppCompatActivity implements View.OnClickListener {
 
     // main body
     private static ListView mListView;
-    private static TextView listTitle;
 
     // controller
     private ImageView btnPrevious;
@@ -108,7 +103,6 @@ public class lyrics extends AppCompatActivity implements View.OnClickListener {
 
     private void initWidgets() {
         // 绑定布局中的widgets
-        listTitle = findViewById(R.id.music_list_title);
         playingName = findViewById(R.id.music_name);
         playingArtist = findViewById(R.id.artist_name);
         musicSeekBar = findViewById(R.id.music_seek_bar);
@@ -252,7 +246,7 @@ public class lyrics extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onDestroy() {
-        Log.d("MainActivity", "onDestroy");
+        Log.d("lyricsActivity", "onDestroy");
         super.onDestroy();
         music_playing = false;
         unregisterReceiver(receiver);
@@ -268,15 +262,6 @@ public class lyrics extends AppCompatActivity implements View.OnClickListener {
         @Override
         public void onReceive(Context context, Intent intent) {
             switch (intent.getIntExtra(MAIN_ACTIVITY_NAME, -1)) {
-                case StatusSigns.SET_LIST_TITLE:
-                    int musicAmount = intent.getIntExtra(MUSIC_AMOUNT, 0);
-                    String title = "本地音乐（总数：" +musicAmount + "）";
-                    listTitle.setText(title);
-                    break;
-
-                case StatusSigns.SET_LIST_VIEW:
-                    setListView(context, intent);
-                    break;
 
                 case StatusSigns.PLAY:
                     music_playing = intent.getBooleanExtra(IS_PLAYING, false);
@@ -310,24 +295,8 @@ public class lyrics extends AppCompatActivity implements View.OnClickListener {
             musicSeekBar.setMax(0);
             musicSeekBar.setProgress(0);
             updatePlayBtnResource(music_playing);
-
-            if (adapter == null) {
-                adapter = (ListAdapter)mListView.getAdapter();
-            }
-            adapter.setFocusItemPos(-1);
         }
 
-        private void setListView(Context context,Intent intent) {
-            try {
-                if (intent.getSerializableExtra(MUSIC_LIST) != null) {
-                    List<MusicInfo> musicList = (List<MusicInfo>) intent.getSerializableExtra(MUSIC_LIST);
-                    adapter = new ListAdapter(context, musicList);
-                    mListView.setAdapter(adapter);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
 
         private void updateControllerPanelAndListFocusedItem(Intent intent) {
             MusicInfo info = (MusicInfo) intent.getSerializableExtra(MUSIC_INFO);

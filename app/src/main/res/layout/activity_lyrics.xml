@@ -21,18 +21,17 @@
         android:id="@+id/music_name"
         android:layout_width="match_parent"
         android:layout_height="37dp"
-        android:text="歌曲名称"
+        android:gravity="center"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:textSize="30sp" />
+
     <TextView
         android:id="@+id/artist_name"
         android:layout_width="match_parent"
         android:layout_height="37dp"
-        android:text="作者名称"
+        android:gravity="center"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:gravity="center"/>
+        android:textSize="18sp" />
     <ListView android:id="@+id/music_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -27,7 +27,7 @@ import java.util.Random;
 
 public class MusicService extends Service {
 
-    public static final String MUSIC_SERVICE_ACTION = "com.madderate.musicbox.MUSIC_SERVICE";
+    public static final String MUSIC_SERVICE_ACTION = "cn.edu.scujcc.musicplayer.MUSIC_SERVICE";
     public static final String MUSIC_SERVICE_NAME = "music_service";
     public static final String LIST_POS = "list_pos";
     public static final String SEEK_POS = "seek_pos";
