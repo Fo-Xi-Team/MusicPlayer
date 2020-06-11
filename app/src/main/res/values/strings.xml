@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">本地音乐播放器</string>
+    <string name="hot_comment_title">热门评论</string>
+    <string name="view_all_comments">查看全部评论</string>
+    <string name="hot_comment_label">热门评论</string>
+    <string name="login_username">用户名</string>
+    <string name="login_password">密码</string>
+    <string name="login_login">登录</string>
+    <string name="login_register">立即注册</string>
+    <string name="login_find_password">找回密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="phone">手机号</string>
+    <string name="gender">性别</string>
+    <string name="gender_male">男</string>
+    <string name="gender_female">女</string>
+    <string name="gender_secret">保密</string>
+    <string name="birthday">生日</string>
+    <string name="birthday_title">请选择你的生日</string>
 </resources>
