@@ -9,8 +9,6 @@
     android:background="#4876FF">
 
 
-
-
     <Button
         android:id="@+id/fanhui"
         android:layout_width="44dp"

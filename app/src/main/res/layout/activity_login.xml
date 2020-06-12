@@ -11,11 +11,11 @@
         android:layout_width="178dp"
         android:layout_height="193dp"
         android:layout_marginTop="32dp"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/gnote" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/r_username"

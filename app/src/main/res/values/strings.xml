@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">本地音乐播放器</string>
+    <string name="app_name">音乐播放器</string>
     <string name="hot_comment_title">热门评论</string>
     <string name="view_all_comments">查看全部评论</string>
     <string name="hot_comment_label">热门评论</string>
